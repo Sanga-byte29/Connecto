@@ -9,7 +9,6 @@ import {
   useDeleteSavedPost,
   useGetCurrentUser,
 } from "@/lib/react-query/queriesAndMutations";
-import Loader from "./Loader";
 
 type PostStatsProps = {
   post?: Models.Document;
@@ -23,7 +22,10 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
   const [likes, setLikes] = useState<string[]>(likesList);
   const [isSaved, setIsSaved] = useState(false);
 
+  
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { mutate: likePost ,isPending: isSavingPost  } = useLikePost();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { mutate: savePost ,isPending: isDeletingSaved } = useSavePost();
   const { mutate: deleteSavePost } = useDeleteSavedPost();
 

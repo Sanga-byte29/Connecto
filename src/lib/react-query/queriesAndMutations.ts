@@ -18,7 +18,7 @@ export const useCreateUserAccount = () => {
 
 export const useSignInAccount = () => {
     return useMutation({
-      mutationFn: (user: { email: string; password: string }) =>
+      mutationFn: (user: { email: string; password: string  }) =>
         signInAccount(user),
     });
   };
@@ -184,9 +184,9 @@ export const useGetUsers = (limit?: number) => {
   });
 };
 
-//@ts-expect-error
 export const useGetPosts = () => {
   return useInfiniteQuery({
+    
     queryKey: [QUERY_KEYS.GET_INFINITE_POSTS],
     queryFn: getInfinitePosts as any,
     getNextPageParam: (lastPage: any) => {
@@ -201,6 +201,8 @@ export const useGetPosts = () => {
     },
   });
 };
+
+
 
 export const useSearchPosts = (searchTerm: string) => {
   return useQuery({

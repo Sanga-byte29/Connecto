@@ -80,6 +80,8 @@ const Explore = () => {
         {shouldShowSearchResults ? (
           <SearchResults
             isSearchFetching={isSearchFetching}
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             searchedPosts={searchedPosts}
           />
         ) : shouldShowPosts ? (

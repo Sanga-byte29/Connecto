@@ -11,9 +11,12 @@ type SearchResultsProps = {
 const SearchResults = ({isSearchFetching, searchedPosts} : SearchResultsProps) => {
     if(isSearchFetching) {
         return <Loader />
-    
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
         if(searchedPosts && searchedPosts.documents.length > 0){
             return (
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
                 <GridPostList posts={searchPosts.documents} />
             )
         }

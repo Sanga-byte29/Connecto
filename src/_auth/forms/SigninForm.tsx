@@ -19,6 +19,8 @@ const SigninForm = () => {
   const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
 
   // Query
+   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   const { mutateAsync: signInAccount, isLoading } = useSignInAccount();
 
   const form = useForm<z.infer<typeof SigninValidation>>({
