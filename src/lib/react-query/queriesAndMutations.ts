@@ -184,6 +184,7 @@ export const useGetUsers = (limit?: number) => {
   });
 };
 
+//@ts-expect-error
 export const useGetPosts = () => {
   return useInfiniteQuery({
     queryKey: [QUERY_KEYS.GET_INFINITE_POSTS],
