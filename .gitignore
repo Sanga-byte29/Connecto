@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 .env.local
+tsconfig.json
 *.local
 
 # Editor directories and files
