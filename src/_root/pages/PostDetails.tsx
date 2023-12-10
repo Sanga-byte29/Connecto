@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { useUserContext } from '@/context/AuthContext';
 import { useDeletePost, useGetPostById } from '@/lib/react-query/queriesAndMutations';
 import { multiFormatDateString } from '@/lib/utils';
-import React from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 

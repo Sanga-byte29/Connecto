@@ -4,6 +4,7 @@ import { defineConfig } from 'vite';
 
 const ignoreBuildErrors = process.env.VITE_IGNORE_BUILD_ERRORS === 'true';
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],

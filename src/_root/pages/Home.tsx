@@ -6,7 +6,7 @@ import { Models } from 'appwrite';
 const Home = () => {
    
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const {data: posts, isPending: isPostLoading, isError: isErrorPosts} = useGetRecentPosts()
+  const {data: posts, isPending: isPostLoading} = useGetRecentPosts()
 
   return (
      <div className="flex flex-1">

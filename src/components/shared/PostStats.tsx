@@ -24,9 +24,9 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
 
   
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { mutate: likePost ,isPending: isSavingPost  } = useLikePost();
+  const { mutate: likePost  } = useLikePost();
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { mutate: savePost ,isPending: isDeletingSaved } = useSavePost();
+  const { mutate: savePost } = useSavePost();
   const { mutate: deleteSavePost } = useDeleteSavedPost();
 
   const { data: currentUser } = useGetCurrentUser();
